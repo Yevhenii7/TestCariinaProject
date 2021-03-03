@@ -15,8 +15,10 @@
  */
 package com.qaprosoft.carina.demo;
 
+import java.net.http.HttpResponse;
 import java.util.List;
 
+import com.qaprosoft.carina.core.foundation.api.http.HttpResponseStatusType;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 import org.testng.Assert;
@@ -39,22 +41,23 @@ import com.qaprosoft.carina.demo.gui.pages.NewsPage;
 
 /**
  * This sample shows how create Web test.
- * 
+ *
  * @author qpsdemo
  */
 public class WebSampleTest extends AbstractTest {
+    HomePage homePage = null;
     @Test(description = "JIRA#AUTO-0008")
     @MethodOwner(owner = "qpsdemo")
     @TestPriority(Priority.P3)
     public void testModelSpecs() {
         // Open GSM Arena home page and verify page is opened
-        HomePage homePage = new HomePage(getDriver());
+        homePage = new HomePage(getDriver());
         homePage.open();
         Assert.assertTrue(homePage.isPageOpened(), "Home page is not opened");
-        
+
         //Closing advertising if it's displayed
         homePage.getWeValuePrivacyAd().closeAdIfPresent();
-        
+
         // Select phone brand
         homePage = new HomePage(getDriver());
         BrandModelsPage productsPage = homePage.selectBrand("Samsung");
@@ -74,7 +77,7 @@ public class WebSampleTest extends AbstractTest {
     @TestTag(name = "area test", value = "web")
     public void testCompareModels() {
         // Open GSM Arena home page and verify page is opened
-        HomePage homePage = new HomePage(getDriver());
+        homePage = new HomePage(getDriver());
         homePage.open();
         Assert.assertTrue(homePage.isPageOpened(), "Home page is not opened");
         // Open model compare page
@@ -88,21 +91,21 @@ public class WebSampleTest extends AbstractTest {
         Assert.assertEquals(specs.get(1).readSpec(SpecType.ANNOUNCED), "2015, June 19");
         Assert.assertEquals(specs.get(2).readSpec(SpecType.ANNOUNCED), "2017, June");
     }
-    
+
     @Test(description = "JIRA#AUTO-0010")
     @MethodOwner(owner = "qpsdemo")
     public void testNewsSearch() {
-        HomePage homePage = new HomePage(getDriver());
+        homePage = new HomePage(getDriver());
         homePage.open();
         Assert.assertTrue(homePage.isPageOpened(), "Home page is not opened!");
-        
+
         NewsPage newsPage = homePage.getFooterMenu().openNewsPage();
         Assert.assertTrue(newsPage.isPageOpened(), "News page is not opened!");
-        
+
         final String searchQ = "iphone";
         List<NewsItem> news = newsPage.searchNews(searchQ);
         Assert.assertFalse(CollectionUtils.isEmpty(news), "News not found!");
-        for(NewsItem n : news) {
+        for (NewsItem n : news) {
             System.out.println(n.readTitle());
             Assert.assertTrue(StringUtils.containsIgnoreCase(n.readTitle(), searchQ), "Invalid search results!");
         }

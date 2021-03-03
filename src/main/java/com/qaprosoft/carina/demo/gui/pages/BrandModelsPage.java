@@ -33,9 +33,8 @@ public class BrandModelsPage extends AbstractPage {
 
     public ModelInfoPage selectModel(String modelName) {
         for (ModelItem model : models) {
-            if (model.readModel().equalsIgnoreCase(modelName)) {
+            if (modelName.equalsIgnoreCase(model.readModel()))
                 return model.openModelPage();
-            }
         }
         throw new RuntimeException("Unable to open model: " + modelName);
     }
