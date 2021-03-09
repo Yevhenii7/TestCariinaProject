@@ -1,11 +1,9 @@
-package com.qaprosoft.carina.demo.test;
+package com.qaprosoft.carina.demo.web.interfaces.pages;
 
 import java.lang.invoke.MethodHandles;
-import java.util.List;
 
-import com.qaprosoft.carina.demo.test.components.WeValueAdvertising;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
+import com.qaprosoft.carina.demo.gui.components.FooterMenu;
+import com.qaprosoft.carina.demo.web.interfaces.components.WeValueAdvertising;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 import org.slf4j.Logger;
@@ -13,8 +11,6 @@ import org.slf4j.LoggerFactory;
 
 import com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement;
 import com.qaprosoft.carina.core.gui.AbstractPage;
-import com.qaprosoft.carina.demo.gui.components.FooterMenu;
-import com.qaprosoft.carina.demo.gui.components.WeValuePrivacyAd;
 
 
 public class HomePage extends AbstractPage {
@@ -52,7 +48,7 @@ public class HomePage extends AbstractPage {
         userIconProfile.click();
     }
 
-    public void selectButtonRegistration() {
+    public void clickButtonRegistration() {
         buttonRegistration.click();
     }
 
@@ -113,4 +109,5 @@ public class HomePage extends AbstractPage {
         assertElementPresent(userDisplays);
         return userDisplays.getText();
     }
+
 }

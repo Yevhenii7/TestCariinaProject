@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite verbose="1" name="Carina Demo Tests - Web Sample" parallel="methods">
+
+
+	<test name="Filter search test">
+		<classes>
+			<class name="com.qaprosoft.carina.demo.web.interfaces.FilterSearchTest" />
+		</classes>
+	</test>
+
+</suite>

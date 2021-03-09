@@ -1,4 +1,4 @@
-package com.qaprosoft.carina.demo.test.components;
+package com.qaprosoft.carina.demo.web.interfaces.components;
 
 import com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement;
 import com.qaprosoft.carina.core.gui.AbstractUIObject;

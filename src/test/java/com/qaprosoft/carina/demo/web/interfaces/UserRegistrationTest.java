@@ -1,6 +1,7 @@
-package com.qaprosoft.carina.demo.test;
+package com.qaprosoft.carina.demo.web.interfaces;
 
 import com.qaprosoft.carina.core.foundation.AbstractTest;
+import com.qaprosoft.carina.demo.web.interfaces.pages.HomePage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -16,12 +17,12 @@ public class UserRegistrationTest extends AbstractTest {
         HomePage homePage = new HomePage(getDriver());
         homePage.open();
         Assert.assertTrue(homePage.isPageOpened(), "Home page is not opened");
-        //Closing advertising if it's displayed
+
         homePage.getWeValueAdvertising().closeAdvertisingIfOpen();
         homePage.clickUserIconProfile();
         Assert.assertEquals(homePage.readButtonRegistration(), "Зарегистрироваться", "Invalid fieldName info!");
 
-        homePage.selectButtonRegistration();
+        homePage.clickButtonRegistration();
 
         homePage.inputName(name);
         homePage.inputMobileNumber(mobileNumber);
