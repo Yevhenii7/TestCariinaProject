@@ -1,7 +1,7 @@
-package com.qaprosoft.carina.demo.web.interfaces;
+package com.qaprosoft.carina.demo.web.ui;
 
 import com.qaprosoft.carina.core.foundation.AbstractTest;
-import com.qaprosoft.carina.demo.web.interfaces.pages.PortableAcousticsPage;
+import com.qaprosoft.carina.demo.web.ui.pages.PortableAcousticsPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

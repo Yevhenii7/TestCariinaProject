@@ -1,8 +1,8 @@
-package com.qaprosoft.carina.demo.web.interfaces.pages;
+package com.qaprosoft.carina.demo.web.ui.pages;
 
 import com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement;
 import com.qaprosoft.carina.core.gui.AbstractPage;
-import com.qaprosoft.carina.demo.web.interfaces.components.WeValueAdvertising;
+import com.qaprosoft.carina.demo.web.ui.components.WeValueAdvertising;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,7 +16,7 @@ import java.util.List;
 public class PowerBankPage extends AbstractPage {
 
 //    @FindBy(xpath = "//div[@class='el-slider price-filter']/descendant::div[5]")
-//    private ExtendedWebElement sliderMax;
+//    private WebElement sliderMax;
 
     @FindBy(xpath = "//div[@class='el-slider__bar']")
     private ExtendedWebElement priceRange;
@@ -42,9 +42,8 @@ public class PowerBankPage extends AbstractPage {
     }
 
     public boolean isPriceRangeVisible() {
-        priceRange.isVisible();
+        return priceRange.isVisible();
 
-        return true;
     }
 
     public void clickCheckBox() {
@@ -52,8 +51,7 @@ public class PowerBankPage extends AbstractPage {
     }
 
     public boolean isLinkFromPageLayoutVisible() {
-        linkFromPageLayout.isVisible();
-        return true;
+        return linkFromPageLayout.isVisible();
     }
 
 

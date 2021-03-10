@@ -1,9 +1,10 @@
-package com.qaprosoft.carina.demo.web.interfaces;
+package com.qaprosoft.carina.demo.web.ui;
 
 import com.qaprosoft.carina.core.foundation.AbstractTest;
-import com.qaprosoft.carina.demo.web.interfaces.pages.BunsPage;
-import com.qaprosoft.carina.demo.web.interfaces.pages.GiftСardsPage;
-import com.qaprosoft.carina.demo.web.interfaces.pages.HomePage;
+import com.qaprosoft.carina.demo.web.ui.pages.BunsPage;
+import com.qaprosoft.carina.demo.web.ui.pages.GiftСardsPage;
+import com.qaprosoft.carina.demo.web.ui.pages.HomePage;
+import com.qaprosoft.carina.demo.web.ui.pages.LoginPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

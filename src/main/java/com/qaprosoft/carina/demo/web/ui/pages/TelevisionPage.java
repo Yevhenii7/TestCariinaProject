@@ -1,8 +1,8 @@
-package com.qaprosoft.carina.demo.web.interfaces.pages;
+package com.qaprosoft.carina.demo.web.ui.pages;
 
 import com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement;
 import com.qaprosoft.carina.core.gui.AbstractPage;
-import com.qaprosoft.carina.demo.web.interfaces.components.WeValueAdvertising;
+import com.qaprosoft.carina.demo.web.ui.components.WeValueAdvertising;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 import org.slf4j.Logger;
@@ -43,8 +43,7 @@ public class TelevisionPage extends AbstractPage {
     }
 
     public boolean isMenuIconClickable() {
-        menuIcon.isClickable();
-        return true;
+        return menuIcon.isClickable();
     }
 
     public void selectSectionTelevision() {
@@ -53,8 +52,7 @@ public class TelevisionPage extends AbstractPage {
     }
 
     public boolean isLinkOnSectionTelevisionClickable() {
-        sectionTelevision.isClickable();
-        return true;
+        return sectionTelevision.isClickable();
     }
 
     public void clickSectionBrandSamsung() {
@@ -62,8 +60,7 @@ public class TelevisionPage extends AbstractPage {
     }
 
     public boolean isLinkOnSectionBrandSamsungClickable() {
-        sectionBrandSamsung.isClickable();
-        return true;
+        return sectionBrandSamsung.isClickable();
     }
 
     public void clickProductName() {
@@ -81,8 +78,7 @@ public class TelevisionPage extends AbstractPage {
     }
 
     public boolean isDialogPopUpWindowAppears() {
-        dialogPopUpWindow.isVisible();
-        return true;
+        return dialogPopUpWindow.isVisible();
     }
 
     public WeValueAdvertising getWeValueAdvertising() {

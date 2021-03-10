@@ -1,4 +1,4 @@
-package com.qaprosoft.carina.demo.web.interfaces.pages;
+package com.qaprosoft.carina.demo.web.ui.pages;
 
 import com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement;
 import com.qaprosoft.carina.core.gui.AbstractPage;
@@ -36,8 +36,7 @@ public class HeadphonesPage extends AbstractPage {
     }
 
     public boolean isPriceRangeVisible() {
-        priceRange.isVisible();
-        return true;
+        return priceRange.isVisible();
     }
 
     public void openLinkInIncognitoWindow() {
@@ -48,7 +47,6 @@ public class HeadphonesPage extends AbstractPage {
     }
 
     public boolean isLinkFromPageLayoutVisible() {
-        linkFromPageLayout.isVisible();
-        return true;
+        return linkFromPageLayout.isVisible();
     }
 }

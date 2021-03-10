@@ -4,7 +4,7 @@
 
 	<test name="Banner clicking test">
 		<classes>
-			<class name="com.qaprosoft.carina.demo.web.interfaces.BannerClickingTest" />
+			<class name="com.qaprosoft.carina.demo.web.ui.BannerTest" />
 		</classes>
 	</test>
 

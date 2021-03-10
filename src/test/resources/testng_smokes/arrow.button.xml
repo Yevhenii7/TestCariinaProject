@@ -4,7 +4,7 @@
 
 	<test name="Arrow button test">
 		<classes>
-			<class name="com.qaprosoft.carina.demo.web.interfaces.ArrowButtonTest" />
+			<class name="com.qaprosoft.carina.demo.web.ui.ArrowButtonTest" />
 		</classes>
 	</test>
 

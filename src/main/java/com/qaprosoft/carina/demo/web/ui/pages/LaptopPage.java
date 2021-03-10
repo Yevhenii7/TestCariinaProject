@@ -1,8 +1,8 @@
-package com.qaprosoft.carina.demo.web.interfaces.pages;
+package com.qaprosoft.carina.demo.web.ui.pages;
 
 import com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement;
 import com.qaprosoft.carina.core.gui.AbstractPage;
-import com.qaprosoft.carina.demo.web.interfaces.components.WeValueAdvertising;
+import com.qaprosoft.carina.demo.web.ui.components.WeValueAdvertising;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 import org.slf4j.Logger;
@@ -87,8 +87,7 @@ public class LaptopPage extends AbstractPage {
     }
 
     public boolean isDialogPopUpWindowAppears() {
-        dialogPopUpWindow.isVisible();
-        return true;
+        return dialogPopUpWindow.isVisible();
     }
 
     public void clickButtonCheckout() {
@@ -141,8 +140,7 @@ public class LaptopPage extends AbstractPage {
     }
 
     public boolean isFieldCitiesVisible() {
-        fieldCities.isVisible();
-        return true;
+        return fieldCities.isVisible();
     }
 
     public void clickLinkDeliveryRegion() {
@@ -159,8 +157,7 @@ public class LaptopPage extends AbstractPage {
     }
 
     public boolean isDropDownMenuVisible() {
-        dropDownMenu.isVisible();
-        return true;
+        return dropDownMenu.isVisible();
     }
 
     public void clickForDeliveryLocation() {

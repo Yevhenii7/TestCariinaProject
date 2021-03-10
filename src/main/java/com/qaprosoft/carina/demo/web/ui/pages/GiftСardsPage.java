@@ -1,4 +1,4 @@
-package com.qaprosoft.carina.demo.web.interfaces.pages;
+package com.qaprosoft.carina.demo.web.ui.pages;
 
 import com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement;
 import com.qaprosoft.carina.core.gui.AbstractPage;
@@ -9,28 +9,24 @@ import org.slf4j.LoggerFactory;
 
 import java.lang.invoke.MethodHandles;
 
-public class BunsPage extends AbstractPage {
+public class GiftСardsPage extends AbstractPage {
     private static final Logger LOGGER = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
 
-    @FindBy(xpath = "//li[@class ='item'][1]")
-    private ExtendedWebElement linkBuns;
+    @FindBy(xpath = "//a[@item-id='501']")
+    private ExtendedWebElement linkGiftCards;
 
-    public BunsPage(WebDriver driver) {
+    public GiftСardsPage(WebDriver driver) {
         super(driver);
     }
-
-    public void clickLinkBuns() {
-        linkBuns.click();
+    public void clickLinkGiftCards() {
+        linkGiftCards.click();
     }
 
-    public String getTitleFromBunsPage() {
+    public String getTitleFromGiftCardsPage() {
         String newWindow = getDriver().getWindowHandle();
         LOGGER.info(getDriver().switchTo().window(newWindow).getTitle());
         return getDriver().switchTo().window(newWindow).getTitle();
 
-    }
-    public void returnBack(){
-        getDriver().navigate().back();
     }
 
 }

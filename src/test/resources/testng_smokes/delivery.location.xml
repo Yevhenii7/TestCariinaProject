@@ -4,7 +4,7 @@
 
 	<test name="Delivery location test">
 		<classes>
-			<class name="com.qaprosoft.carina.demo.web.interfaces.DeliveryLocationTest" />
+			<class name="com.qaprosoft.carina.demo.web.ui.DeliveryLocationTest" />
 		</classes>
 	</test>
 

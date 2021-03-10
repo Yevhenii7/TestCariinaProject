@@ -1,8 +1,8 @@
-package com.qaprosoft.carina.demo.web.interfaces.pages;
+package com.qaprosoft.carina.demo.web.ui.pages;
 
 import com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement;
 import com.qaprosoft.carina.core.gui.AbstractPage;
-import com.qaprosoft.carina.demo.web.interfaces.components.WeValueAdvertising;
+import com.qaprosoft.carina.demo.web.ui.components.WeValueAdvertising;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.FindBy;
 import org.slf4j.Logger;
@@ -37,8 +37,7 @@ public class PortableAcousticsPage extends AbstractPage {
     }
 
     public boolean isLinkFromPageLayoutVisible() {
-        linkFromPageLayout.isVisible();
-        return true;
+        return linkFromPageLayout.isVisible();
     }
 
     public void clickForAnyAvailableProduct() {
@@ -57,8 +56,7 @@ public class PortableAcousticsPage extends AbstractPage {
     }
 
     public boolean isLinkFromProductsPageVisible() {
-        linkFromProductsPage.isVisible();
-        return true;
+        return linkFromProductsPage.isVisible();
     }
 
 
