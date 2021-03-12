@@ -4,7 +4,7 @@
 
 	<test name="Item adding test">
 		<classes>
-			<class name="com.qaprosoft.carina.demo.web.ui.ItemAddingTest" />
+			<class name="com.qaprosoft.carina.demo.web.citrus.ua.ItemAddingToBasketTest" />
 		</classes>
 	</test>
 

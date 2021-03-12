@@ -4,7 +4,7 @@
 
 	<test name="Header menu test">
 		<classes>
-			<class name="com.qaprosoft.carina.demo.web.ui.HeaderMenuTest" />
+			<class name="com.qaprosoft.carina.demo.web.citrus.ua.HeaderMenuTest" />
 		</classes>
 	</test>
 

@@ -4,7 +4,7 @@
 
 	<test name="Request by searching test">
 		<classes>
-			<class name="com.qaprosoft.carina.demo.web.ui.RequestBySearchingTest" />
+			<class name="com.qaprosoft.carina.demo.web.citrus.ua.RequestBySearchingTest" />
 		</classes>
 	</test>
 

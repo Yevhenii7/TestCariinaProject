@@ -4,7 +4,7 @@
 
 	<test name="User registration test">
 		<classes>
-			<class name="com.qaprosoft.carina.demo.web.ui.UserRegistrationTest" />
+			<class name="com.qaprosoft.carina.demo.web.citrus.ua.UserRegistrationTest" />
 		</classes>
 	</test>
 

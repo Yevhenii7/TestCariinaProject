@@ -4,7 +4,7 @@
 
 	<test name="Link open test">
 		<classes>
-			<class name="com.qaprosoft.carina.demo.web.ui.LinkOpenTest" />
+			<class name="com.qaprosoft.carina.demo.web.citrus.ua.LinkOpenTest" />
 		</classes>
 	</test>
 
