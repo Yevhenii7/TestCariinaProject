@@ -60,6 +60,7 @@ public class DeliveryPage extends AbstractPage {
 
     @FindBy(xpath = "//div[contains(@class, 'ms-res-ctn dropdown-menu')]//*[text() = 'Відділення №1: вул. Пирогівський шлях, 135']")
     private ExtendedWebElement deliveryDepartment;
+
     @FindBy(xpath = "//div[contains(@class, 'ms-sel-ctn')]//*[text() = 'Відділення №1: вул. Пирогівський шлях, 135']")
     private ExtendedWebElement formDeliveryDepartment;
 
@@ -109,21 +110,6 @@ public class DeliveryPage extends AbstractPage {
 
     }
 
-//    public void inputNameAndSurname(String nameAndSurname) {
-//        LOGGER.info("input name and surname " + nameAndSurname);
-//        inputNameAndSurname.type(nameAndSurname);
-//    }
-//
-//    public void inputMobilePhone(String mobilePhone) {
-//        LOGGER.info("input mobile number " + mobilePhone);
-//        inputMobilePhone.type(mobilePhone);
-//    }
-//
-//    public void inputEmail(String email) {
-//        LOGGER.info("input email " + email);
-//        inputEmail.type(email);
-//    }
-
     public HomePage checkoutDeliveryLocation(UserDelivery userDelivery) {
         inputNameAndSurname.type(userDelivery.getNameAndSurname());
         inputMobilePhone.type(userDelivery.getMobilePhone());
@@ -133,22 +119,6 @@ public class DeliveryPage extends AbstractPage {
 
 
     }
-
-//    public String readFieldNameAndSurname() {
-//        assertElementPresent(inputNameAndSurname);
-//        return inputNameAndSurname.getAttribute("autocomplete");
-//    }
-//
-//    public String readFieldMobilePhone() {
-//        assertElementPresent(inputMobilePhone);
-//        return inputMobilePhone.getAttribute("autocomplete");
-//    }
-//
-//    public String readFieldEmail() {
-//        assertElementPresent(inputEmail);
-//        return inputEmail.getAttribute("autocomplete");
-//    }
-
 
     public void clickButtonNext() {
         buttonNext.click();
