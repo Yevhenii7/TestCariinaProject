@@ -17,9 +17,6 @@ public class BannerPage extends AbstractPage {
     private static final Logger LOGGER = LogManager.getRootLogger();
     Banner testBanner = BannerCreator.withCredentialsFromProperty();
 
-//    String expectedTitleFromBanner = "Apple на 24 дольки с ПУМБ";
-//    String expectedTitleFromPageLayout = "Apple на 24 дольки с ПУМБ Купить по цене от 4999 " +
-//            "в Киеве, Харькове, Днепре, Одессе, Полтаве, Запорожье, Николаеве, Украине | Цитрус";
 
     @FindBy(css = ".swiper-button-next")
     private ExtendedWebElement buttonArrowRightNext;
