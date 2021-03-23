@@ -19,6 +19,7 @@ public class UserRegistrationTest extends AbstractTest {
                 .getLoggedUserName();
         Assert.assertEquals(loggedInUserName, (testUser.getUserName()));
 
+
     }
 
 

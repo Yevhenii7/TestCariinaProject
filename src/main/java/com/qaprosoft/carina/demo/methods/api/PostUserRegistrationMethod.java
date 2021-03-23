@@ -13,14 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.qaprosoft.carina.demo.api;
+package com.qaprosoft.carina.demo.methods.api;
 
 import com.qaprosoft.carina.core.foundation.api.AbstractApiMethodV2;
 import com.qaprosoft.carina.core.foundation.utils.Configuration;
 
-public class PostUserMethod extends AbstractApiMethodV2 {
-    public PostUserMethod() {
-        super("api.user/_post/rq.json", "api.user/_post/rs.json", "api.user/user.properties");
+public class PostUserRegistrationMethod extends AbstractApiMethodV2 {
+    public static final String API_USER_POST_REQUEST = "api.user.registration/post/rq.json";
+    public static final String API_USER_POST_RESPONSE = "api.user.registration/post/rs.json";
+
+    public PostUserRegistrationMethod() {
+        super(API_USER_POST_REQUEST, API_USER_POST_RESPONSE);
         replaceUrlPlaceholder("base_url", Configuration.getEnvArg("api_url"));
     }
 }
