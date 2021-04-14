@@ -6,22 +6,48 @@ import com.qaprosoft.carina.core.gui.AbstractPage;
 
 public abstract class LoginPageBase extends AbstractPage {
 
-	public LoginPageBase(WebDriver driver) {
-		super(driver);
-	}
+    public LoginPageBase(WebDriver driver) {
+        super(driver);
+    }
 
-	public abstract void typeName(String name);
+    public abstract void typeName(String name);
 
-	public abstract void typePassword(String password);
+    public abstract void typePassword(String password);
 
-	public abstract void selectMaleSex();
+    public abstract void selectMaleSex();
 
-	public abstract void checkPrivacyPolicyCheckbox();
+    public abstract void checkPrivacyPolicyCheckbox();
 
-	public abstract CarinaDescriptionPageBase clickLoginBtn();
+    public abstract CarinaDescriptionPageBase clickLoginBtn();
 
-	public abstract boolean isLoginBtnActive();
+    public abstract WebViewPageBase clickLoginButton();
 
-	public abstract CarinaDescriptionPageBase login();
+    public abstract boolean isLoginBtnActive();
+
+    public abstract boolean isFieldTypeNamePresented();
+
+    public abstract boolean isFieldTypePasswordPresented();
+
+    public abstract boolean isMaleRadioBtnPresented();
+
+    public abstract boolean isFeMaleRadioBtnPresented();
+
+    public abstract boolean isPrivacyPolicyCheckboxPresented();
+
+    public abstract boolean isMaleRadioBtnUnchecked();
+
+    public abstract boolean isFemaleRadioBtnChecked();
+
+    public abstract boolean isPrivacyPolicyCheckboxUnchecked();
+
+    public abstract boolean isPrivacyPolicyCheckboxChecked();
+
+
+    public abstract String getTypeName();
+
+    public abstract String getTypePassword();
+
+
+    public abstract CarinaDescriptionPageBase login();
 
 }
