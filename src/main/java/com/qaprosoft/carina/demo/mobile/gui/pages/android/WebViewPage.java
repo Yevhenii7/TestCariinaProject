@@ -12,6 +12,8 @@ public class WebViewPage extends WebViewPageBase {
 
     @FindBy(className = "t708__btn")
     private ExtendedWebElement contactUsLink;
+    @FindBy(id = "content_frame")
+    private ExtendedWebElement webViewContent;
 
     public WebViewPage(WebDriver driver) {
         super(driver);
@@ -21,6 +23,11 @@ public class WebViewPage extends WebViewPageBase {
     public ContactUsPageBase goToContactUsPage() {
         contactUsLink.click();
         return initPage(getDriver(), ContactUsPageBase.class);
+    }
+
+    @Override
+    public boolean isPageOpened() {
+        return webViewContent.isElementPresent();
     }
 
 }

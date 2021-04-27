@@ -1,6 +1,8 @@
 package com.qaprosoft.carina.demo;
 
+import com.qaprosoft.carina.core.foundation.webdriver.decorator.ExtendedWebElement;
 import org.apache.commons.lang3.RandomStringUtils;
+import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -34,9 +36,11 @@ public class MobileSampleTest extends AbstractTest implements IMobileUtils {
         loginPage.checkPrivacyPolicyCheckbox();
         CarinaDescriptionPageBase carinaDescriptionPage = loginPage.clickLoginBtn();
         Assert.assertTrue(carinaDescriptionPage.isPageOpened(), "Carina description page isn't opened");
+
+
     }
 
-	@Test(description = "JIRA#DEMO-0011")
+    @Test(description = "JIRA#DEMO-0011")
     @MethodOwner(owner = "qpsdemo")
     public void testWebView() {
         WelcomePageBase welcomePage = initPage(getDriver(), WelcomePageBase.class);
@@ -53,7 +57,7 @@ public class MobileSampleTest extends AbstractTest implements IMobileUtils {
         hideKeyboard();
         contactUsPage.submit();
         Assert.assertTrue(contactUsPage.isSuccessMessagePresent() || contactUsPage.isRecaptchaPresent(),
-            "message was not sent or captcha was not displayed");
+                "message was not sent or captcha was not displayed");
     }
 
     @Test(description = "JIRA#DEMO-0011")
@@ -79,6 +83,44 @@ public class MobileSampleTest extends AbstractTest implements IMobileUtils {
         Assert.assertTrue(uiElements.isFemaleRadioButtonSelected(), "Female radio button was not selected!");
         uiElements.clickOnOtherRadioButton();
         Assert.assertTrue(uiElements.isOthersRadioButtonSelected(), "Others radio button was not selected!");
+
     }
+
+    @Test(description = "JIRA#DEMO-0011")
+    @MethodOwner(owner = "Kolchiba Yevhenii")
+    public void verifyLoginPage() {
+        String name = "User";
+        String password = "1234";
+        WelcomePageBase welcomePageBase = initPage(getDriver(), WelcomePageBase.class);
+        LoginPageBase loginPageBase = welcomePageBase.clickNextBtn();
+        Assert.assertTrue(loginPageBase.isPageOpened(), "Login page is not opened");
+
+        Assert.assertTrue(loginPageBase.isFieldTypeNamePresented(), "Field type name is not presented");
+        Assert.assertTrue(loginPageBase.isFieldTypePasswordPresented(), "Field type password is not presented");
+        Assert.assertTrue(loginPageBase.isMaleRadioBtnPresented() || loginPageBase.isMaleRadioBtnUnchecked(), "Field male radio button is not presented");
+        Assert.assertTrue(loginPageBase.isFeMaleRadioBtnPresented() || loginPageBase.isFemaleRadioBtnChecked(), "Field female radio button is not presented");
+        Assert.assertTrue(loginPageBase.isPrivacyPolicyCheckboxPresented() || loginPageBase.isPrivacyPolicyCheckboxUnchecked(), "Field privacy  checkbox is not presented");
+
+        loginPageBase.typeName(name);
+        Assert.assertEquals(loginPageBase.getTypeName(), name, "Name is not typed");
+
+        loginPageBase.typePassword(password);
+        Assert.assertEquals(loginPageBase.getTypePassword(), password, "Password is not typed");
+
+        loginPageBase.selectMaleSex();
+        Assert.assertTrue(loginPageBase.isFemaleRadioBtnChecked(), "Female radio button is not checked");
+
+        loginPageBase.checkPrivacyPolicyCheckbox();
+        Assert.assertTrue(loginPageBase.isPrivacyPolicyCheckboxChecked(),"Privacy policy checkbox is not present");
+
+        WebViewPageBase webViewPageBase = loginPageBase.clickLoginButton();
+        Assert.assertTrue(webViewPageBase.isPageOpened(), "Web view page isn't opened");
+
+
+
+
+
+    }
+
 
 }

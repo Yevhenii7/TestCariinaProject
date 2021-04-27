@@ -4,7 +4,7 @@
 	<parameter name="suiteOwner" value="qpsdemo"/>
 	<parameter name="zafira_project" value="UNKNOWN"/>
 	<parameter name="jenkinsJobName" value="API-DataProvider-Classes"/>
-	<parameter name="jenkinsJobType" value="api"/>
+	<parameter name="jenkinsJobType" value="com.qaprosoft.carina.demo.api"/>
 	<parameter name="jenkinsEnvironments" value="DEMO"/>
 	<parameter name="jenkinsEmail" value="demo@qaprosoft.com"/>
 
