@@ -157,6 +157,7 @@ public class LoginPage extends LoginPageBase {
         selectMaleSex();
         checkPrivacyPolicyCheckbox();
         return clickLoginBtn();
+
     }
 
 }
