@@ -15,6 +15,7 @@ import org.testng.annotations.Test;
 
 public class WebLocalizationSample extends AbstractTest {
 
+
     @Test
     @MethodOwner(owner = "qpsdemo")
     public void testLanguages() {
