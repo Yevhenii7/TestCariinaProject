@@ -48,7 +48,6 @@ capabilities.adbExecTimeout=180000
 
 #uncomment and change deviceName and platformVersion for iOS test
 #======== Local Run for iOS Mobile ===============#
-
 selenium_host=http://localhost:4723/wd/hub
 capabilities.platformName=iOS
 capabilities.deviceName=Iphone 8
